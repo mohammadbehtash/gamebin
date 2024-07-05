@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalService } from '../service/modal.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+constructor(public modal:ModalService){}
+  openModal(event:Event){
+    event.preventDefault()
+    this.modal.toggelmodal('auth')
+  }
 }
