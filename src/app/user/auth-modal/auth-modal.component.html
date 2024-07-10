@@ -1,19 +1,8 @@
   <app-modal modalID="auth">
     <p class="text-2xl font-bold" heading>حساب کاربری</p>
-
-  <!-- Tabs -->
-  <ul class="flex flex-wrap mb-4">
-    <li class="flex-auto text-center">
-      <a class="block rounded py-3 px-4 transition hover:text-white text-white
-        bg-indigo-400" href="#">ورود</a>
-    </li>
-    <li class="flex-auto text-center">
-      <a class="block rounded py-3 px-4 transition hover:text-indigo-400" 
-        href="#">ثبت نام</a>
-    </li>
-  </ul>
-
-  <!-- Login Form -->
+<app-tabscontainet>
+    <!-- Login Form -->
+    <app-tab tabTitle="ورود"> 
   <form>
     <!-- Email -->
     <div class="mb-3">
@@ -38,8 +27,11 @@
       ورود
     </button>
   </form>
-  <!-- Registration Form -->
-  <form>
+    </app-tab> 
+
+    <!-- Registration Form -->
+    <app-tab tabTitle="ثبت نام">
+<form>
     <!-- Name -->
     <div class="mb-3">
       <label class="inline-block mb-2">نام</label>
@@ -93,4 +85,11 @@
       ثبت نام
     </button>
   </form>
+    </app-tab>
+
+</app-tabscontainet>
+
+ 
+ 
+  
 </app-modal>
