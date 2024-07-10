@@ -6,7 +6,8 @@
         class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
           duration-500 focus:outline-none rounded bg-transparent
           focus:border-indigo-400"
-        placeholder=" ایمیل" />
+        placeholder=" ایمیل" pattern="/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/">
+       
     </div>
     <!-- Password -->
     <div class="mb-3">
@@ -14,8 +15,9 @@
       <input type="password" required ngModel name="password" minlength="8"
         class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
         duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
-        placeholder="رمز عبور" />
+        placeholder="رمز عبور" pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/"/>
     </div>
+
     <button type="submit" [disabled]="loginForm.invalid" 
       class="block w-full  text-white py-1.5 px-3 rounded transition"
         
